@@ -1,7 +1,7 @@
 {
-  "name": "@stepsec/conventional-changelog",
+  "name": "@release-git/conventional-changelog",
   "version": "7.0.0",
-  "description": "Conventional changelog plugin for StepSec",
+  "description": "Conventional changelog plugin for release-git",
   "type": "module",
   "exports": {
     ".": "./index.js",
@@ -9,10 +9,12 @@
   },
   "scripts": {
     "test": "bron test.js --serial",
-    "release": "release"
+    "release": "release-git"
   },
   "keywords": [
     "release",
+    "release-git",
+    "release-git-plugin",
     "plugin",
     "conventional",
     "changelog",
@@ -22,13 +24,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StepSec/conventional-changelog.git"
+    "url": "https://github.com/release-git/conventional-changelog.git"
   },
-  "homepage": "https://github.com/StepSec/conventional-changelog#readme",
-  "bugs": "https://github.com/StepSec/conventional-changelog/issues",
+  "homepage": "https://github.com/release-git/conventional-changelog#readme",
+  "bugs": "https://github.com/release-git/conventional-changelog/issues",
   "author": {
     "name": "Md Sulaiman",
-    "email": "infosulaimanbd@gmail.com",
+    "email": "infosulaimanbd@gmail.com"
   },
   "dependencies": {
     "concat-stream": "^2.0.0",
@@ -38,24 +40,24 @@
   },
   "devDependencies": {
     "bron": "^2.0.2",
-    "@stepsec/release": "^16.1.0",
+    "release-git": "^16.0.0",
     "shelljs": "^0.8.5",
     "sinon": "^15.2.0",
     "tmp": "^0.2.1"
   },
   "peerDependencies": {
-    "@stepsec/release": "^16.1.0"
+    "release-git": "^16.0.0"
   },
   "engines": {
     "node": ">=16"
   },
-  "release-it": {
+  "release-git": {
     "hooks": {
       "before:init": "npm test"
     },
     "github": {
       "release": true,
-      "tokenRef": "GITHUB_TOKEN_RELEASE"
+      "tokenRef": "GITHUB_TOKEN_RELEASE_IT"
     }
   }
 }

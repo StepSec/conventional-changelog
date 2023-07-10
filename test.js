@@ -6,7 +6,7 @@ import { EOL } from 'os';
 import sh from 'shelljs';
 import tmp from 'tmp';
 import semver from 'semver';
-import runTasks from 'release';
+import runTasks from 'release-git';
 
 sh.config.silent = true;
 
